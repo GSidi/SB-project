@@ -9,12 +9,17 @@ import java.util.List;
 public class TopicService {
 
     List<Topics> topics = Arrays.asList(
-            new Topics("spring", "Spring Framework", "Spring Framework description"),
-                new Topics("java", "Java Framework", "Java Framework description"),
-                new Topics("c++", "C++ Framework", "C++ Framework description")
+            new Topics("spring", "SpringFramework", "Spring Framework description"),
+                new Topics("java", "JavaFramework", "Java Framework description"),
+                new Topics("c++", "C++Framework", "C++ Framework description")
         );
 
     public List<Topics> getAllTopics() {
         return topics;
+    }
+
+
+    public Topics getTopic(String topicId){
+        return topics.stream().filter(t -> t.getId().equals(topicId)).findFirst().get();
     }
 }
