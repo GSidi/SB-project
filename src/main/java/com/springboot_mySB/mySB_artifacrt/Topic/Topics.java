@@ -1,4 +1,4 @@
-package com.springboot_mySB.mySB_artifacrt;
+package com.springboot_mySB.mySB_artifacrt.Topic;
 
 public class Topics {
 
