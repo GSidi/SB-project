@@ -16,7 +16,7 @@ public class ClassController {
         return classService.getAllClassrooms();
     }
 
-    @RequestMapping("/topics/{classId}")
+    @RequestMapping("/classroom/{classId}")
     public Classroom getClass(@PathVariable String classId){
         return  classService.getClass(classId);
     }

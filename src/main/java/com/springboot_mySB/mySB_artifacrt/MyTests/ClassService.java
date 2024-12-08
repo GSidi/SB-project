@@ -9,10 +9,10 @@ import java.util.List;
 public class ClassService {
 
     List<Classroom> classrooms = new ArrayList<Classroom>();
-    Classroom mathClassroom = new Classroom(1,20, 15, true, "Introduction to mathematics");
-    Classroom geographyClassroom = new Classroom(2,23, 25, false, "Introduction to geography");
-    Classroom physicsClassroom = new Classroom(3, 44 ,30 ,false, "Introduction to physics");
-    Classroom literatureClassroom = new Classroom(434, 5, 33, true, "Introduction to literature");
+    Classroom mathClassroom = new Classroom("1",20, 15, true, "Introduction to mathematics");
+    Classroom geographyClassroom = new Classroom("2",23, 25, false, "Introduction to geography");
+    Classroom physicsClassroom = new Classroom("3", 44 ,30 ,false, "Introduction to physics");
+    Classroom literatureClassroom = new Classroom("4", 5, 33, true, "Introduction to literature");
 
     public List<Classroom> getAllClassrooms() {
 
@@ -24,7 +24,7 @@ public class ClassService {
     }
 
     public Classroom getClass (String classId){
-        return classrooms.stream().filter(cl -> cl.equals(classId)).findFirst().get();
+        return classrooms.stream().filter(cl -> cl.getClassroomId().equals(classId)).findFirst().get();
     }
 
 }

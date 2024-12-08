@@ -3,11 +3,11 @@ package com.springboot_mySB.mySB_artifacrt.MyTests;
 public class Classroom {
 
     private int numberOfSeats;
-    private int classroomId;
+    private String classroomId;
     private int numberOfStudents;
     private boolean availability = false;
     private String classroomName;
-    public Classroom(int classroomId, int numberOfSeats, int numberOfStudents, boolean availability, String classroomName) {
+    public Classroom(String classroomId, int numberOfSeats, int numberOfStudents, boolean availability, String classroomName) {
         this.classroomId = classroomId;
         this.availability = availability;
         this.numberOfSeats = numberOfSeats;
@@ -15,11 +15,11 @@ public class Classroom {
         this.classroomName = classroomName;
     }
 
-    public int getClassroomId() {
+    public String getClassroomId() {
         return classroomId;
     }
 
-    public void setClassroomId(int classroomId) {
+    public void setClassroomId(String classroomId) {
         this.classroomId = classroomId;
     }
 
