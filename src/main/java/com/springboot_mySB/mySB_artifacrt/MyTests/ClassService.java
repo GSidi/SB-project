@@ -27,4 +27,8 @@ public class ClassService {
         return classrooms.stream().filter(cl -> cl.getClassroomId().equals(classId)).findFirst().get();
     }
 
+    public void addClassroom(Classroom classroom){
+        classrooms.add(classroom);
+    }
+
 }

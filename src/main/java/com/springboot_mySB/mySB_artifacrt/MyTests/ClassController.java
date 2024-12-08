@@ -1,9 +1,7 @@
 package com.springboot_mySB.mySB_artifacrt.MyTests;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,4 +18,14 @@ public class ClassController {
     public Classroom getClass(@PathVariable String classId){
         return  classService.getClass(classId);
     }
+
+    @PostMapping("/classroom")
+    public void addClassroom(@RequestBody Classroom classroom){
+        classService.addClassroom(classroom);
+    }
+
+//    @PutMapping("/classroom/")
+//    public void addClassroom(@RequestBody Classroom classroom){
+//        classService.addClassroom(classroom);
+//    }
 }
