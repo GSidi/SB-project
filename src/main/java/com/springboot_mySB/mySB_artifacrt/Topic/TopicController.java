@@ -13,7 +13,7 @@ import java.util.List;
 public class TopicController {
 
     @Autowired
-    private  TopicService topicService;
+    private  TopicService topicService; //@Autowired says to spring that we need an injection of TopicService.
 
     @RequestMapping("/topics")
     public List<Topics> getAllTopics() {
