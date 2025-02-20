@@ -13,7 +13,7 @@ public class Topics {
         this.description = description;
     }
 
-    //null constructor
+    //no args constructor
     public Topics() {
     }
 
